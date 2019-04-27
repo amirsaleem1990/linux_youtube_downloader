@@ -15,9 +15,9 @@ except:
 if a:
     link = input('Enter your Youtube link: ')
     if link:
-    #YouTube(link).streams.first().download()
-        quality = int(input([i for i in ['360', '480', '720', '1080']]))
-        YouTube(link).streams.filter(subtype='mp4', res="{}p".format(quality)).all()[0].download()
+	    YouTube(link).streams.first().download()
+        # quality = int(input([i for i in ['360', '480', '720', '1080']]))
+        # YouTube(link).streams.filter(subtype='mp4', res="{}p".format(quality)).all()[0].download()
     else:
         with open('youtube_links.txt', 'a+') as file:
             links = file.readlines()
